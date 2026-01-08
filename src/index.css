@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles or overrides can go here if needed, but generally, stick to utility classes. */
+
+/* Example of a custom utility class if absolutely necessary (though discouraged in pure Tailwind) */
+/*
+.container-full-width {
+  @apply w-full max-w-none;
+}
+*/
+
+/* Define custom scrollbar styles for better aesthetics (optional, but good practice) */
+/* Note: This is non-standard and might require vendor prefixes or specific browser support */
+/*
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.indigo.600') theme('colors.gray.200');
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme('colors.indigo.600');
+    border-radius: 10px;
+    border: 2px solid theme('colors.gray.100');
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: theme('colors.gray.200');
+  }
+}
+*/
+
+/* Ensure smooth transitions globally */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Base body styling for a clean look */
+body {
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
+
+/* Custom component example (if needed) */
+/*
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 font-semibold rounded-lg shadow-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+  }
+}
+*/
